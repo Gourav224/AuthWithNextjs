@@ -11,10 +11,10 @@ export async function POST(request:NextRequest) {
         const reqBody=await request.json();
         const {username,email,password}= reqBody;
         //vaalidate
-        console.log(reqBody);
+        // console.log(reqBody);
         
         const user = await User.findOne({email})
-        console.log(user);
+        // console.log(user);
         if(user){
             return NextResponse.json({error:"User already exists"},
                 {status:400});
