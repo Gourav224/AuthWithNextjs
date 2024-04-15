@@ -4,7 +4,7 @@ import User from "@/models/user.models";
 import { NextRequest, NextResponse } from "next/server";
 
 connect();
-export async function POST(request: NextRequest) {
+export async function GET(request: NextRequest) {
   try {
     //extract data from token
     const userId = await getDataFromToken(request);
